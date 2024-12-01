@@ -25,7 +25,7 @@ with col1:
     st.write(f"Age: {age}")
     
     # Add Gender input
-    gender = st.selectbox("Female", ["Female", "Male", "Other", "Prefer not to say"])
+    gender = st.selectbox("Select your gender", ["Female", "Male", "Other", "Prefer not to say"])
 
     # Editable Educational Attainment (Checklist)
     st.header("Educational Attainment")
@@ -76,13 +76,14 @@ with col1:
 with col2:
     st.subheader("Photo")
     st.write("You can upload a profile photo below:")
-    uploaded_photo = st.file_uploader("att.jAajCdJn1gMkER96wazceWxlo7c7WWxFsQAYCwllYfs.jpeg", type=["jpg", "jpeg", "png"])
+    uploaded_photo = st.file_uploader("C:\Windows\Web\Wallpaper\ThemeC\img30.jpg", type=["jpg", "jpeg", "png"])
 
     if uploaded_photo:
         photo = Image.open(uploaded_photo)
         st.image(photo, caption=f"{name}'s Photo", use_column_width=True)
     else:
-        st.write("No photo uploaded.")
+        default_photo = image.open("Danica.jpg")
+        st.image(default_photo, caption=f"{name}'s Photo, use_column_width=True)
 
 # Display the User's Input as a Profile in two columns
 
