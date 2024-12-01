@@ -13,7 +13,7 @@ with col1:
     st.header("About Me")
     name = st.text_input("Enter your full name", "Danica Villanueva Dagohoy")
     bio = st.text_area("Write a short bio about yourself", 
-                       "Hola! I'm passionate about traveling and exploring new places it's my way of finding adventure and inspiration. When I'm not traveling, you'll often find me on the volleyball court, enjoying the game i love. Life's all about balance and chasing what makes you happy!.")
+                       "Hola! I’m passionate about traveling and exploring new places it’s my way of finding adventure and inspiration. When I’m not traveling, you’ll often find me on the volleyball court, immersed in the game I love. Life’s all about balance and chasing what makes you happy!.")
     birthday = st.text_input("Enter your birthday", "July 26, 2005")
     
     # Add age input, automatically calculate age based on birthday
@@ -40,7 +40,7 @@ with col1:
         "Others"
     ]
     
-    education_selected  = ["College Level"]
+    education_selected  = ["College Level]
     
     for option in education_options:
         if st.checkbox(option):
@@ -65,24 +65,13 @@ with col1:
     st.header("Contact Information")
     email = st.text_input("Email", "danicadagohoy21@gmail.com")
     phone = st.text_input("Phone", "09666931171")
-    facebook = st.text_input("Facebook Profile URL", "https://www.facebok.com/princessdanica.dagohoy.")
+    facebook = st.text_input("Facebook Profile URL", "https://www.facebook.com/princessdanica.dagohoy")
 
 
     # Editable Hobbies/Interests
     st.header("Hobbies & Interests")
     hobbies = st.text_area("List your hobbies or interests", 
-                           "- Playing Badminton & Volleybal, - Swimming, - Photography")
-# Editable Photo (in the second column)
-with col2:
-    st.subheader("Photo")
-    st.write("You can upload a profile photo below:")
-    uploaded_photo = st.file_uploader("C:\Windows\Web\Wallpaper\ThemeC\img30.jpg", type=["jpg", "jpeg", "png"])
-
-    if uploaded_photo:
-        photo = Image.open(uploaded_photo)
-        st.image(photo, caption=f"{name}'s Photo", use_column_width=True)
-    else:
-        default_photo = image.open("Danica.jpg")
+                           "- Playing Badminton & Volleyball, -Swimming, -Photography")
 
 # Display the User's Input as a Profile in two columns
 
@@ -113,10 +102,3 @@ with col1:
 
     st.subheader("Hobbies & Interests")
     st.write(hobbies)
-
-# Right column: Photo (positioned on the upper right)
-with col2:
-    if uploaded_photo:
-        st.image(photo, caption=f"{name}'s Photo", use_column_width=True)
-    else:
-        st.write("No photo uploaded.")
