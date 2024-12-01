@@ -71,7 +71,9 @@ with col1:
     # Editable Hobbies/Interests
     st.header("Hobbies & Interests")
     hobbies = st.text_area("List your hobbies or interests", 
-                           "- Playing Badminton & Volleybal, -Swimming, -Photography")
+                           "- Playing Badminton & Volleybal 
+                           - Swimming 
+                           - Photography")
 # Editable Photo (in the second column)
 with col2:
     st.subheader("Photo")
