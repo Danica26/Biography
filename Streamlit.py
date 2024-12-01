@@ -25,7 +25,7 @@ with col1:
     st.write(f"Age: {age}")
     
     # Add Gender input
-    gender = st.selectbox("Select your gender", ["Female", "Male", "Other", "Prefer not to say"])
+    gender = st.selectbox("Female", ["Female", "Male", "Other", "Prefer not to say"])
 
     # Editable Educational Attainment (Checklist)
     st.header("Educational Attainment")
@@ -40,7 +40,7 @@ with col1:
         "Others"
     ]
     
-    education_selected  = []
+    education_selected  = ["College Level"]
     
     for option in education_options:
         if st.checkbox(option):
@@ -56,27 +56,27 @@ with col1:
     
     # Editable Parental Information
     st.header("Parental Information")
-    father_name = st.text_input("Father's Name", "Mr. Noel P. Bernadez")
-    father_occupation = st.text_input("Father's Occupation", "Tricycle Driver")
-    mother_name = st.text_input("Mother's Name", "Mrs. Wennylyn B. Bernadez")
+    father_name = st.text_input("Father's Name", "Mr. Danilo Ñ. Dagohoy")
+    father_occupation = st.text_input("Father's Occupation", "Electrician")
+    mother_name = st.text_input("Mother's Name", "Mrs. Maricel V. Dagohoy")
     mother_occupation = st.text_input("Mother's Occupation", "Housewife")
 
     # Editable Contact Information
     st.header("Contact Information")
-    email = st.text_input("Email", "angelicabernadez322@gmail.com")
-    phone = st.text_input("Phone", "09857880196")
-    facebook = st.text_input("Facebook Profile URL", "https://web.facebook.com/me/")
+    email = st.text_input("Email", "danicadagohoy21@gmail.com")
+    phone = st.text_input("Phone", "09666931171")
+    facebook = st.text_input("Facebook Profile URL", "https://www.facebok.com/princessdanica.dagohoy.")
 
 
     # Editable Hobbies/Interests
     st.header("Hobbies & Interests")
     hobbies = st.text_area("List your hobbies or interests", 
-                           "- Playing Badminton and Watching Korean Drama")
+                           "- Playing Badminton & Volleybal, - Swimming, - Photography")
 # Editable Photo (in the second column)
 with col2:
     st.subheader("Photo")
     st.write("You can upload a profile photo below:")
-    uploaded_photo = st.file_uploader("C:\Windows\Web\Wallpaper\ThemeC\img30.jpg", type=["jpg", "jpeg", "png"])
+    uploaded_photo = st.file_uploader("att.jAajCdJn1gMkER96wazceWxlo7c7WWxFsQAYCwllYfs.jpeg", type=["jpg", "jpeg", "png"])
 
     if uploaded_photo:
         photo = Image.open(uploaded_photo)
