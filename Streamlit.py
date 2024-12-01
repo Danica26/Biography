@@ -11,10 +11,10 @@ col1, col2 = st.columns([3, 1])
 # Editable Personal Details (in the first column)
 with col1:
     st.header("About Me")
-    name = st.text_input("Enter your full name", "Angelica Marie B. Bernadez")
+    name = st.text_input("Enter your full name", "Danica Villanueva Dagohoy")
     bio = st.text_area("Write a short bio about yourself", 
-                       "I am a first year student, taking the course of Bachelor of Science in Computer Engineering.")
-    birthday = st.text_input("Enter your birthday", "December 19, 2005")
+                       "Hola! I'm passionate about traveling and exploring new places it's my way of finding adventure and inspiration. When I'm not traveling, you'll often find me on the volleyball court, enjoying the game i love. Life's all about balance and chasing what makes you happy!.")
+    birthday = st.text_input("Enter your birthday", "July 26, 2005")
     
     # Add age input, automatically calculate age based on birthday
     today = datetime.today()
