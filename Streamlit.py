@@ -40,7 +40,7 @@ with col1:
         "Others"
     ]
     
-    education_selected  = []
+    education_selected  = ["College Level"]
     
     for option in education_options:
         if st.checkbox(option):
