@@ -83,7 +83,6 @@ with col2:
         st.image(photo, caption=f"{name}'s Photo", use_column_width=True)
     else:
         default_photo = image.open("Danica.jpg")
-        st.image(default_photo, caption=f"{name}'s Photo, use_column_width=True)
 
 # Display the User's Input as a Profile in two columns
 
